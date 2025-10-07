@@ -4,11 +4,15 @@ import (
 	"fmt"
 )
 
-func main() {
-	var result string
-	var a int
-	fmt.Scan(&a)
-	if (a%10)%2 == 0 {
+func main_351() {
+	var sex, result string
+	var age int
+
+	fmt.Scan(&age, &sex)
+
+	ok := (12 <= age) && (age <= 18) && (sex == "m")
+
+	if ok {
 		result = "YES"
 	} else {
 		result = "NO"
