@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func main_3414() {
 	var w int
 	fmt.Scan(&w)
 
