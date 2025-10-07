@@ -2,24 +2,15 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
 func main_3412() {
-	var n int
-	fmt.Scan(&n)
-	pol := true
-	for i := 1; i <= 2; i++ {
-		a := (n / int(math.Pow(10, float64(i-1)))) % 10
-		b := (n / int(math.Pow(10, float64(4-i)))) % 10
-		if a == b {
-			continue
-		} else {
-			pol = false
-			break
-		}
-	}
-	if pol {
+	var a, b, c int
+	fmt.Scan(&a, &b, &c)
+
+	exist := (a+b > c) && (a+c > b) && (b+c > a)
+
+	if exist {
 		fmt.Println("YES")
 	} else {
 		fmt.Println("NO")

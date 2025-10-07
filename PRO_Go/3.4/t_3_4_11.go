@@ -5,23 +5,17 @@ import (
 	"math"
 )
 
-func main() {
-	var n int
-	fmt.Scan(&n)
-	pol := true
-	for i := 1; i <= 2; i++ {
-		a := (n / int(math.Pow(10, float64(i-1)))) % 10
-		b := (n / int(math.Pow(10, float64(4-i)))) % 10
-		if a == b {
-			continue
-		} else {
-			pol = false
-			break
-		}
-	}
+func main_3411() {
+	var qx, qy, ox, oy int
+	var result string
+	fmt.Scan(&qx, &qy, &ox, &oy)
+
+	pol := (qx == ox) || (qy == oy) || (math.Abs(float64(qx-ox)) == math.Abs(float64(qy-oy)))
+
 	if pol {
 		fmt.Println("YES")
 	} else {
 		fmt.Println("NO")
 	}
+	fmt.Println(result)
 }

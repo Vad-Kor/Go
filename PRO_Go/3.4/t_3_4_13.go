@@ -2,26 +2,17 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
+func get_class_count(count int) (result int) {
+	result = count/2 + count%2
+
+	return result
+}
+
 func main_3413() {
-	var n int
-	fmt.Scan(&n)
-	pol := true
-	for i := 1; i <= 2; i++ {
-		a := (n / int(math.Pow(10, float64(i-1)))) % 10
-		b := (n / int(math.Pow(10, float64(4-i)))) % 10
-		if a == b {
-			continue
-		} else {
-			pol = false
-			break
-		}
-	}
-	if pol {
-		fmt.Println("YES")
-	} else {
-		fmt.Println("NO")
-	}
+	var a, b, c int
+	fmt.Scan(&a, &b, &c)
+
+	fmt.Println(get_class_count(a) + get_class_count(b) + get_class_count(c))
 }
