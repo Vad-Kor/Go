@@ -5,13 +5,13 @@ import (
 )
 
 func main_4411() {
-	var a, b, f int
+	var n int
 
-	fmt.Scan(&a, &b)
-	f = 1
+	fmt.Scan(&n)
+	step := 1
 
-	for i := a; i <= b; i++ {
-		f *= i
+	for step <= n {
+		fmt.Println(step)
+		step = step * 2
 	}
-	fmt.Println(f)
 }

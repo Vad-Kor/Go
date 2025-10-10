@@ -5,15 +5,16 @@ import (
 )
 
 func main_4412() {
-	var a, b, f int
+	var n int
 
-	fmt.Scan(&a, &b)
-	f = 1
+	fmt.Scan(&n)
+	k := 0
+	res := 1
 
-	for i := a; i <= b; i++ {
-		if i%10 == 7 || i%10 == -7 {
-			f *= i
-		}
+	for res < n {
+		k++
+		res = res * 2
+
 	}
-	fmt.Println(f)
+	fmt.Println(k)
 }

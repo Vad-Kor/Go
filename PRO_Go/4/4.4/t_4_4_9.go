@@ -5,13 +5,15 @@ import (
 )
 
 func main_449() {
-	var n, f int
+	var n int
 
 	fmt.Scan(&n)
-	f = 1
+	count := 0
 
-	for i := 1; i <= n; i++ {
-		f *= i
+	for n%3 == 0 {
+		n = n / 3
+		count++
 	}
-	fmt.Println(f)
+
+	fmt.Println(count)
 }

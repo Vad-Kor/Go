@@ -5,15 +5,14 @@ import (
 )
 
 func main_4413() {
-	var n, f int
+	var a, b int
 
-	fmt.Scan(&n)
-	f = 1
+	fmt.Scan(&a, &b)
 
-	for i := 1; i <= n; i++ {
-		if i%2 == 0 {
-			f *= i
-		}
+	nod := min(a, b)
+
+	for a%nod != 0 || b%nod != 0 {
+		nod--
 	}
-	fmt.Println(f)
+	fmt.Println(nod)
 }

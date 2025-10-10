@@ -4,16 +4,14 @@ import (
 	"fmt"
 )
 
-func main_435() {
-	var n, f int
-
+func main() {
+	var n int
 	fmt.Scan(&n)
-	f = 1
 
-	for i := 1; i <= n; i++ {
-		if i%2 == 0 {
-			f *= i
-		}
+	i := 2
+	for n%i != 0 {
+		i++
+
 	}
-	fmt.Println(f)
+	fmt.Println(n / i)
 }
