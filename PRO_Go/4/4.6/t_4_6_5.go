@@ -4,17 +4,19 @@ import (
 	"fmt"
 )
 
-func main_4513() {
-	var n int
+func main_465() {
+	var n, prevN int
 
 	fmt.Scan(&n)
+
 	count := 0
 
-	for n > 0 {
-		if n%2 == 1 {
+	for n != 0 {
+		prevN = n
+		fmt.Scan(&n)
+		if n*prevN < 0 {
 			count++
 		}
-		n /= 2
 	}
 
 	fmt.Println(count)
