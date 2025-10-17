@@ -4,15 +4,24 @@ import (
 	"fmt"
 )
 
-func main() {
+func main_475() {
 	var n int
+	var simpleNumber int = 2
 
 	fmt.Scan(&n)
+	count := 0
 
-	for i := 2; i < n; i++ {
-		if n%i == 0 {
-			fmt.Println(i)
+	for n != 1 {
+
+		if n%simpleNumber == 0 {
+			if count != 0 {
+				fmt.Print(" ")
+			}
+			fmt.Print(simpleNumber)
+			count++
+			n = n / simpleNumber
+		} else {
+			simpleNumber++
 		}
 	}
-
 }
