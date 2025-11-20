@@ -46,7 +46,7 @@ func main_918() {
 		}
 	}
 
-	if maxValueIndex < prevMaxValueIndex {
+	if maxValueIndex <= prevMaxValueIndex {
 		fmt.Println(maxValue, prevMaxValue)
 	} else {
 		fmt.Println(prevMaxValue, maxValue)
